@@ -24,8 +24,8 @@ public class List {
             System.out.println("Элемент " + data + " не найден");
         else {
             ListElement e = head;
-            while (e.next != null) {
-                if (e.next.data == data) {
+            while (e != null) {
+                if (e.data == data) {
                     System.out.println("Элемент " + data + " найден");
                     return;
                 }
