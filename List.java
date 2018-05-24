@@ -13,7 +13,28 @@ public class List {
             tail = a;
         }
     }
-    pu
+    public void srch(int data) {
+        ListElement b = new ListElement();
+        b.data = data;
+        if (head == null)
+            System.out.println("Элемент " + data + " не найден");
+        if ((head == tail) & (head == b))
+            System.out.println("Элемент " + data + " найден");
+        if ((head == tail) & (head != b))
+            System.out.println("Элемент " + data + " не найден");
+        else {
+            ListElement e = head;
+            while (e.next != null) {
+                if (e.next.data == data) {
+                    System.out.println("Элемент " + data + " найден");
+                    return;
+                }
+
+                e = e.next;
+            }
+            System.out.println("Элемент " + data + " не найден");
+        }
+    }
 
     public void del(int data) {
         if (head == null)
